@@ -24,13 +24,13 @@ const getOptions = async () => {
     };
   }
   // Else, use the path of chrome-aws-lambda and its args
-  const executablePath = await chromium.executablePath(
-    'https://www.datocms-assets.com/61479/1736585984-chromium-v131-0-1-pack.tar',
-  );
+  // const executablePath = await chromium.executablePath(
+  //   'https://www.datocms-assets.com/61479/1736585984-chromium-v131-0-1-pack.tar',
+  // );
 
   return {
     args: chromium.args,
-    executablePath,
+    executablePath: '/vercel/.cache/puppeteer/chrome/linux-133.0.6943.53',
     headless: true,
   };
 };
