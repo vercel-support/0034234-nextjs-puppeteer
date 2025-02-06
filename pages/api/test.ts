@@ -30,7 +30,8 @@ const getOptions = async () => {
 
   return {
     args: chromium.args,
-    executablePath: '/vercel/path0/.cache/puppeteer/chrome/linux-133.0.6943.53',
+    executablePath: await chromium.executablePath(),
+    // executablePath: '/vercel/path0/.cache/puppeteer/chrome/linux-133.0.6943.53',
     // executablePath: '/vercel/.cache/puppeteer/chrome/linux-133.0.6943.53',
     headless: true,
   };
